@@ -10,7 +10,7 @@
 		B148F04F27836DA3000B24C6 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F04E27836DA3000B24C6 /* AddAccount.swift */; };
 		B148F05127836F0F000B24C6 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F05027836F0F000B24C6 /* AccountModel.swift */; };
 		B148F05F27836F5E000B24C6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F05727836F5E000B24C6 /* Data.framework */; };
-		B148F06427836F5E000B24C6 /* DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F06327836F5E000B24C6 /* DataTests.swift */; };
+		B148F06427836F5E000B24C6 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F06327836F5E000B24C6 /* RemoteAddAccountTests.swift */; };
 		B148F06D27836FB4000B24C6 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F04727836CDF000B24C6 /* Domain.framework */; };
 		B148F06E27836FB4000B24C6 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B148F04727836CDF000B24C6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -52,7 +52,7 @@
 		B148F05027836F0F000B24C6 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		B148F05727836F5E000B24C6 /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148F05E27836F5E000B24C6 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B148F06327836F5E000B24C6 /* DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTests.swift; sourceTree = "<group>"; };
+		B148F06327836F5E000B24C6 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +122,7 @@
 		B148F06227836F5E000B24C6 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				B148F06327836F5E000B24C6 /* DataTests.swift */,
+				B148F06327836F5E000B24C6 /* RemoteAddAccountTests.swift */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -297,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B148F06427836F5E000B24C6 /* DataTests.swift in Sources */,
+				B148F06427836F5E000B24C6 /* RemoteAddAccountTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
