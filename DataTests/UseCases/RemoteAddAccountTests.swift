@@ -4,7 +4,7 @@ import Data
 
 class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_http_client_with_correct_url() throws {
-        let url = try makeUrl()
+        let url = try XCTUnwrap(makeUrl())
         let (sut, httpClientSpy) = makeSut(url: url)
         let addAccountModel = makeAddAccountModel()
         sut.add(addAccountModel: addAccountModel) { _ in }
@@ -49,15 +49,15 @@ extension RemoteAddAccountTests {
         return (sut, httpClientSpy)
     }
     
-    func expect(_ sut: RemoteAddAccount, completeWith expectedResult: Result<AccountModel,DomainError>, when action: () -> Void) {
+    func expect(_ sut: RemoteAddAccount, completeWith expectedResult: Result<AccountModel,DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
             switch (expectedResult, receivedResult) {
             case (let .failure(expectedError), let .failure(receivedError)):
-                XCTAssertEqual(expectedError, receivedError)
+                XCTAssertEqual(expectedError, receivedError, file: file, line: line)
             case (let .success(expectedAccount), let .success(receivedAccount)):
-                XCTAssertEqual(expectedAccount, receivedAccount)
-            default: XCTFail("Expected \(expectedResult) recieve \(receivedResult) instead")
+                XCTAssertEqual(expectedAccount, receivedAccount, file: file, line: line)
+            default: XCTFail("Expected \(expectedResult) recieve \(receivedResult) instead", file: file, line: line)
             }
             exp.fulfill()
         }
@@ -66,8 +66,8 @@ extension RemoteAddAccountTests {
         wait(for: [exp], timeout: 1)
     }
     
-    func makeUrl() throws -> URL {
-        return try XCTUnwrap(URL(string: "hrrp://any-url.com"))
+    func makeUrl() -> URL? {
+        return URL(string: "hrrp://any-url.com")
     }
     
     func makeInvalidData() -> Data {
