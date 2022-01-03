@@ -7,25 +7,27 @@ class RemoteAddAccountTests: XCTestCase {
         let url = try XCTUnwrap(URL(string: "hrrp://any-url.com"))
         let (sut, httpClientSpy) = makeSut(url: url)
         let addAccountModel = makeAddAccountModel()
-        sut.add(addAccountModel: addAccountModel, httpClient: httpClientSpy) { _ in }
+        sut.add(addAccountModel: addAccountModel) { _ in }
         XCTAssertEqual(httpClientSpy.url, [url])
     }
     
     func test_add_should_call_http_client_with_correct_data() throws {
         let (sut, httpClientSpy) = makeSut()
         let addAccountModel = makeAddAccountModel()
-        sut.add(addAccountModel: addAccountModel, httpClient: httpClientSpy) { _ in }
+        sut.add(addAccountModel: addAccountModel) { _ in }
         XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
     }
     
-    func test_add_should_complete_with_error_if_client_fails() {
+    func test_add_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
         let exp = expectation(description: "waiting")
-        sut.add(addAccountModel: makeAddAccountModel(), httpClient: httpClientSpy) { error in
-            XCTAssertEqual(error, DomainError.unexpected)
+        sut.add(addAccountModel: makeAddAccountModel()) { result in
+            switch result {
+            case let .failure(error): XCTAssertEqual(error, .unexpected)
+            case .success: XCTFail("Expected error recieve \(result) instead")
+            }
             exp.fulfill()
         }
-        
         httpClientSpy.completeWithError(.noConnectivity)
         wait(for: [exp], timeout: 1)
     }
@@ -45,16 +47,16 @@ extension RemoteAddAccountTests {
     class HttpClientSpy: HttpPostClient {
         var url = [URL?]()
         var data: Data?
-        var completion: ((HttpError) -> ())?
+        var completion: ((Result<Data,HttpError>) -> Void)?
         
-        func post(to url: URL, with data: Data?, completion: @escaping (HttpError) -> Void) {
+        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data,HttpError>) -> Void) {
             self.url.append(url)
             self.data = data
             self.completion = completion
         }
         
         func completeWithError(_ error: HttpError) {
-            completion?(error)
+            completion?(.failure(error))
         }
     }
 }
