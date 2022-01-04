@@ -20,7 +20,7 @@ class AlamofireAdapter {
 }
 
 class AlamofireAdapterTests: XCTestCase {
-    func test_should_make_request_with_valid_url_and_method() {
+    func test_post_should_make_request_with_valid_url_and_method() {
         let url = makeUrl()
         testRequestFor(data: makeValidData()) { request in
             XCTAssertEqual(url, request.url)
@@ -29,24 +29,14 @@ class AlamofireAdapterTests: XCTestCase {
         }
     }
     
-    func test_should_make_request_with_no_data() {
+    func test_post_should_make_request_with_no_data() {
         testRequestFor(data: nil) { request in
             XCTAssertNil(request.httpBodyStream)
         }
     }
     
-    func test_should_complete_with_error_when_request_completes_with_error() {
-        let sut = makeSut()
-        UrlProtocolStub.simulate(response: nil, data: nil, error: makeError())
-        let exp = expectation(description: "waiting")
-        sut.post(to: makeUrl(), with: makeValidData()) { result in
-            switch result {
-            case .failure(let error): XCTAssertEqual(error, .noConnectivity)
-            case .success: XCTFail("Expected error got \(result) instead")
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1)
+    func test_post_should_complete_with_error_when_request_completes_with_error() {
+        expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, makeError()))
     }
 }
 
@@ -68,6 +58,23 @@ extension AlamofireAdapterTests {
         UrlProtocolStub.observeRequest { request = $0 }
         wait(for: [exp], timeout: 1)
         action(request!)
+    }
+    
+    func expectResult(_ expectedResult: Result<Data,HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?), file: StaticString = #filePath, line: UInt = #line) {
+        let sut = makeSut()
+        UrlProtocolStub.simulate(response: stub.response, data: stub.data, error: stub.error)
+        let exp = expectation(description: "waiting")
+        sut.post(to: makeUrl(), with: makeValidData()) { recievedResult in
+            switch (expectedResult, recievedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedData), .success(let receivedData)):
+                XCTAssertEqual(expectedData, receivedData, file: file, line: line)
+            default:
+                XCTFail("Expected \(expectedResult) but got \(recievedResult) instead", file: file, line: line)
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
     }
 }
 
