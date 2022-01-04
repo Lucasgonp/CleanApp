@@ -19,6 +19,10 @@
 		B148F08027838DA4000B24C6 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F07F27838DA4000B24C6 /* DomainError.swift */; };
 		B148F0822783900A000B24C6 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F0812783900A000B24C6 /* HttpError.swift */; };
 		B148F08527839FF0000B24C6 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08427839FF0000B24C6 /* ExtensionHelpers.swift */; };
+		B148F08827846D6F000B24C6 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08727846D6F000B24C6 /* TestExtensions.swift */; };
+		B148F08A27846DF6000B24C6 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08927846DF6000B24C6 /* TestFactories.swift */; };
+		B148F08D27846E7B000B24C6 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08C27846E7B000B24C6 /* HttpClientSpy.swift */; };
+		B148F08F27846EC1000B24C6 /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,10 @@
 		B148F07F27838DA4000B24C6 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		B148F0812783900A000B24C6 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		B148F08427839FF0000B24C6 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
+		B148F08727846D6F000B24C6 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		B148F08927846DF6000B24C6 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
+		B148F08C27846E7B000B24C6 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
+		B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +146,9 @@
 		B148F06227836F5E000B24C6 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				B148F08627846D62000B24C6 /* Helpers */,
 				B148F07D27838888000B24C6 /* UseCases */,
+				B148F08B27846E4A000B24C6 /* Http */,
 			);
 			path = DataTests;
 			sourceTree = "<group>";
@@ -206,6 +216,24 @@
 				B148F08427839FF0000B24C6 /* ExtensionHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B148F08627846D62000B24C6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B148F08727846D6F000B24C6 /* TestExtensions.swift */,
+				B148F08927846DF6000B24C6 /* TestFactories.swift */,
+				B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B148F08B27846E4A000B24C6 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				B148F08C27846E7B000B24C6 /* HttpClientSpy.swift */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +406,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B148F08A27846DF6000B24C6 /* TestFactories.swift in Sources */,
+				B148F08D27846E7B000B24C6 /* HttpClientSpy.swift in Sources */,
 				B148F06427836F5E000B24C6 /* RemoteAddAccountTests.swift in Sources */,
+				B148F08F27846EC1000B24C6 /* AccountModelFactory.swift in Sources */,
+				B148F08827846D6F000B24C6 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

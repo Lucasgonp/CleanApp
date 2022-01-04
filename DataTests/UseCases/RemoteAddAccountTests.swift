@@ -57,13 +57,8 @@ extension RemoteAddAccountTests {
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         checkMemoryLeak(for: sut, file: file, line: line)
+        checkMemoryLeak(for: httpClientSpy, file: file, line: line)
         return (sut, httpClientSpy)
-    }
-    
-    func checkMemoryLeak(for instance: AnyObject, file: StaticString = #filePath, line: UInt = #line) {
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance, file: file, line: line)
-        }
     }
     
     func expect(_ sut: RemoteAddAccount, completeWith expectedResult: Result<AccountModel,DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
@@ -83,39 +78,7 @@ extension RemoteAddAccountTests {
         wait(for: [exp], timeout: 1)
     }
     
-    func makeUrl() -> URL {
-        return URL(string: "hrrp://any-url.com")!
-    }
-    
-    func makeInvalidData() -> Data {
-        return Data("Invalid Data".utf8)
-    }
-    
     func makeAddAccountModel() -> AddAccountModel {
         return AddAccountModel(name: "any_name", email: "any_email@mail.com", password: "any_password", passwordConfirmation: "any_password")
-    }
-    
-    func makeAccountModel() -> AccountModel {
-        return AccountModel(name: "any_name", email: "any_email@mail.com", password: "any_password", id: "any_id")
-    }
-    
-    class HttpClientSpy: HttpPostClient {
-        var url = [URL?]()
-        var data: Data?
-        var completion: ((Result<Data,HttpError>) -> Void)?
-        
-        func post(to url: URL, with data: Data?, completion: @escaping (Result<Data,HttpError>) -> Void) {
-            self.url.append(url)
-            self.data = data
-            self.completion = completion
-        }
-        
-        func completeWithError(_ error: HttpError) {
-            completion?(.failure(error))
-        }
-        
-        func completeWithData(_ error: Data) {
-            completion?(.success(error))
-        }
     }
 }
