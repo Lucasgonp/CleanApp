@@ -4,7 +4,7 @@ import Data
 
 class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_http_client_with_correct_url() throws {
-        let url = try XCTUnwrap(makeUrl())
+        let url = makeUrl()
         let (sut, httpClientSpy) = makeSut(url: url)
         let addAccountModel = makeAddAccountModel()
         sut.add(addAccountModel: addAccountModel) { _ in }
@@ -40,6 +40,16 @@ class RemoteAddAccountTests: XCTestCase {
             httpClientSpy.completeWithData(makeInvalidData())
         }
     }
+    
+    func test_add_should_not_complete_if_sut_has_been_deallocated() {
+        let httpClientSpy = HttpClientSpy()
+        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeUrl(), httpClient: httpClientSpy)
+        var result: Result<AccountModel, DomainError>?
+        sut?.add(addAccountModel: makeAddAccountModel(), completion: { result = $0 })
+        sut = nil
+        httpClientSpy.completeWithError(.noConnectivity)
+        XCTAssertNil(result)
+    }
 }
 
 extension RemoteAddAccountTests {
@@ -73,8 +83,8 @@ extension RemoteAddAccountTests {
         wait(for: [exp], timeout: 1)
     }
     
-    func makeUrl() -> URL? {
-        return URL(string: "hrrp://any-url.com")
+    func makeUrl() -> URL {
+        return URL(string: "hrrp://any-url.com")!
     }
     
     func makeInvalidData() -> Data {
