@@ -4,6 +4,10 @@ func makeInvalidData() -> Data {
     return Data("Invalid Data".utf8)
 }
 
+func makeEmptyData() -> Data {
+    return Data()
+}
+
 func makeValidData() -> Data {
     return Data("{\"name\":\"Lucas\"}".utf8)
 }
