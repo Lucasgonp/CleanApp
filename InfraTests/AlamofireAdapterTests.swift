@@ -9,8 +9,10 @@ class AlamofireAdapter {
     }
     
     func post(to url: URL, with data: Data?) {
+        let _ = session
         let json = (data == nil) ? nil : try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:Any]
         session.request(url, method: .post, parameters: json, encoding: JSONEncoding.default).resume()
+        let _ = session
     }
 }
 
@@ -32,11 +34,12 @@ class AlamofireAdapterTests: XCTestCase {
 }
 
 extension AlamofireAdapterTests {
-    func makeSut() -> AlamofireAdapter {
+    func makeSut(file: StaticString = #filePath, line: UInt = #line) -> AlamofireAdapter {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [UrlProtocolStub.self]
         let session = Session(configuration: configuration)
         let sut = AlamofireAdapter(session: session)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
