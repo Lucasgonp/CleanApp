@@ -36,7 +36,8 @@
 		B148F0C42785087A000B24C6 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F05727836F5E000B24C6 /* Data.framework */; };
 		B148F0DB2785AFCE000B24C6 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F0D32785AFCE000B24C6 /* Presentation.framework */; };
 		B148F0E02785AFCE000B24C6 /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F0DF2785AFCE000B24C6 /* SignUpPresenterTests.swift */; };
-		B148F0E12785AFCE000B24C6 /* Presentation.h in Headers */ = {isa = PBXBuildFile; fileRef = B148F0D52785AFCE000B24C6 /* Presentation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B148F0E92785C734000B24C6 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F0E82785C734000B24C6 /* SignUpPresenter.swift */; };
+		B148F0EE2785C7AC000B24C6 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F0ED2785C7AC000B24C6 /* AlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,13 @@
 			remoteGlobalIDString = B148F0D22785AFCE000B24C6;
 			remoteInfo = Presentation;
 		};
+		B148F0EA2785C74B000B24C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B148F04627836CDF000B24C6;
+			remoteInfo = Domain;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -148,9 +156,10 @@
 		B148F0C02785087A000B24C6 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148F0C22785087A000B24C6 /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		B148F0D32785AFCE000B24C6 /* Presentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Presentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B148F0D52785AFCE000B24C6 /* Presentation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Presentation.h; sourceTree = "<group>"; };
 		B148F0DA2785AFCE000B24C6 /* PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B148F0DF2785AFCE000B24C6 /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
+		B148F0E82785C734000B24C6 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		B148F0ED2785C7AC000B24C6 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -408,7 +417,8 @@
 		B148F0D42785AFCE000B24C6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B148F0D52785AFCE000B24C6 /* Presentation.h */,
+				B148F0EF2785C7CF000B24C6 /* Presenters */,
+				B148F0EC2785C7A3000B24C6 /* Views */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -416,9 +426,41 @@
 		B148F0DE2785AFCE000B24C6 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
-				B148F0DF2785AFCE000B24C6 /* SignUpPresenterTests.swift */,
+				B148F0F12785C7EB000B24C6 /* Presenters */,
+				B148F0F02785C7E4000B24C6 /* Views */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		B148F0EC2785C7A3000B24C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B148F0ED2785C7AC000B24C6 /* AlertView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B148F0EF2785C7CF000B24C6 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B148F0E82785C734000B24C6 /* SignUpPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		B148F0F02785C7E4000B24C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B148F0F12785C7EB000B24C6 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				B148F0DF2785AFCE000B24C6 /* SignUpPresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +491,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B148F0E12785AFCE000B24C6 /* Presentation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +626,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				B148F0EB2785C74B000B24C6 /* PBXTargetDependency */,
 			);
 			name = Presentation;
 			productName = Presentation;
@@ -642,6 +684,7 @@
 					};
 					B148F0D22785AFCE000B24C6 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 					};
 					B148F0D92785AFCE000B24C6 = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -801,6 +844,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B148F0EE2785C7AC000B24C6 /* AlertView.swift in Sources */,
+				B148F0E92785C734000B24C6 /* SignUpPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +899,11 @@
 			isa = PBXTargetDependency;
 			target = B148F0D22785AFCE000B24C6 /* Presentation */;
 			targetProxy = B148F0DC2785AFCE000B24C6 /* PBXContainerItemProxy */;
+		};
+		B148F0EB2785C74B000B24C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B148F04627836CDF000B24C6 /* Domain */;
+			targetProxy = B148F0EA2785C74B000B24C6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1278,6 +1328,7 @@
 		B148F0E32785AFCE000B24C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1301,6 +1352,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -1308,6 +1360,7 @@
 		B148F0E42785AFCE000B24C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1338,6 +1391,7 @@
 		B148F0E62785AFCE000B24C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Q3AAX42YQ;
@@ -1355,6 +1409,7 @@
 		B148F0E72785AFCE000B24C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Q3AAX42YQ;
