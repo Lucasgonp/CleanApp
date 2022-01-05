@@ -1,8 +1,6 @@
 import XCTest
 import Presentation
-import Data
 import Domain
-@testable import DataTests
 
 class SignUpPresenterTests: XCTestCase {
     func test_signUp_should_show_error_message_if_name_is_not_provided() throws {
@@ -117,8 +115,9 @@ class SignUpPresenterTests: XCTestCase {
 }
 
 extension SignUpPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy()) -> SignUpPresenter {
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), emailValidator: EmailValidatorSpy = EmailValidatorSpy(), addAccount: AddAccountSpy = AddAccountSpy(), file: StaticString = #file, line: UInt = #line) -> SignUpPresenter {
         let sut = SignUpPresenter(alertView: alertView, emailValidator: emailValidator, addAccount: addAccount)
+        checkMemoryLeak(for: sut, file: file, line: line)
         return sut
     }
     
