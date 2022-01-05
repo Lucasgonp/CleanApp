@@ -16,3 +16,9 @@ extension SignUpViewController: LoadingView {
         viewModel.isLoading ? actitityIndicator.startAnimating() : actitityIndicator.stopAnimating()
     }
 }
+
+extension SignUpViewController: AlertView {
+    func showMessage(viewModel: AlertViewModel) {
+        
+    }
+}
