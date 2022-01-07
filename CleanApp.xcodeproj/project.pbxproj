@@ -56,6 +56,7 @@
 		B16C620B27862BB90091E762 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16C620A27862BB90091E762 /* SignUp.storyboard */; };
 		B1A829222788D35F005C3240 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829212788D35F005C3240 /* TestExtensions.swift */; };
 		B1A829252788DBFC005C3240 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */; };
+		B1A829272788DD29005C3240 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829262788DD29005C3240 /* Storyboarded.swift */; };
 		B1E978822785FF5A002CA6BF /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -220,6 +221,7 @@
 		B16C620A27862BB90091E762 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		B1A829212788D35F005C3240 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		B1A829262788DD29005C3240 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -663,6 +665,7 @@
 			isa = PBXGroup;
 			children = (
 				B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */,
+				B1A829262788DD29005C3240 /* Storyboarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1146,6 +1149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1A829252788DBFC005C3240 /* UIViewControllerExtensions.swift in Sources */,
+				B1A829272788DD29005C3240 /* Storyboarded.swift in Sources */,
 				B16C6201278627D90091E762 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
