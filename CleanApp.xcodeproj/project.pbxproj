@@ -78,7 +78,9 @@
 		B1A8298E278B9DEA005C3240 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16C61E62786234A0091E762 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B1A82991278B9DEA005C3240 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A8292D278B9636005C3240 /* Validation.framework */; platformFilter = ios; };
 		B1A82992278B9DEA005C3240 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1A8292D278B9636005C3240 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B1A82998278B9E67005C3240 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82997278B9E67005C3240 /* SignUpFactory.swift */; };
+		B1A82998278B9E67005C3240 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82997278B9E67005C3240 /* ControllerFactory.swift */; };
+		B1A8299A278BA47C005C3240 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82999278BA47C005C3240 /* UseCaseFactory.swift */; };
+		B1A8299D278BA520005C3240 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8299C278BA520005C3240 /* SignUpComposer.swift */; };
 		B1E978822785FF5A002CA6BF /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -345,7 +347,9 @@
 		B1A8295B278B9BE8005C3240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1A8295D278B9BE8005C3240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A82962278B9BE8005C3240 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1A82997278B9E67005C3240 /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
+		B1A82997278B9E67005C3240 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
+		B1A82999278BA47C005C3240 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		B1A8299C278BA520005C3240 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -857,6 +861,7 @@
 		B1A8294E278B9BE6005C3240 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B1A8299B278BA510005C3240 /* Composers */,
 				B1A82996278B9E57005C3240 /* Factories */,
 				B1A8294F278B9BE6005C3240 /* AppDelegate.swift */,
 				B1A82951278B9BE6005C3240 /* SceneDelegate.swift */,
@@ -877,9 +882,18 @@
 		B1A82996278B9E57005C3240 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				B1A82997278B9E67005C3240 /* SignUpFactory.swift */,
+				B1A82997278B9E67005C3240 /* ControllerFactory.swift */,
+				B1A82999278BA47C005C3240 /* UseCaseFactory.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		B1A8299B278BA510005C3240 /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				B1A8299C278BA520005C3240 /* SignUpComposer.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1530,9 +1544,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A8299A278BA47C005C3240 /* UseCaseFactory.swift in Sources */,
 				B1A82950278B9BE6005C3240 /* AppDelegate.swift in Sources */,
 				B1A82952278B9BE6005C3240 /* SceneDelegate.swift in Sources */,
-				B1A82998278B9E67005C3240 /* SignUpFactory.swift in Sources */,
+				B1A82998278B9E67005C3240 /* ControllerFactory.swift in Sources */,
+				B1A8299D278BA520005C3240 /* SignUpComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
