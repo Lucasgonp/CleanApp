@@ -66,6 +66,19 @@
 		B1A82952278B9BE6005C3240 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82951278B9BE6005C3240 /* SceneDelegate.swift */; };
 		B1A82959278B9BE8005C3240 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1A82958278B9BE8005C3240 /* Assets.xcassets */; };
 		B1A8295C278B9BE8005C3240 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1A8295A278B9BE8005C3240 /* LaunchScreen.storyboard */; };
+		B1A8297D278B9DEA005C3240 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F05727836F5E000B24C6 /* Data.framework */; platformFilter = ios; };
+		B1A8297E278B9DEA005C3240 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B148F05727836F5E000B24C6 /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A82981278B9DEA005C3240 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F04727836CDF000B24C6 /* Domain.framework */; platformFilter = ios; };
+		B1A82982278B9DEA005C3240 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B148F04727836CDF000B24C6 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A82985278B9DEA005C3240 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F095278470AC000B24C6 /* Infra.framework */; platformFilter = ios; };
+		B1A82986278B9DEA005C3240 /* Infra.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B148F095278470AC000B24C6 /* Infra.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A82989278B9DEA005C3240 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B148F0D32785AFCE000B24C6 /* Presentation.framework */; platformFilter = ios; };
+		B1A8298A278B9DEA005C3240 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B148F0D32785AFCE000B24C6 /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A8298D278B9DEA005C3240 /* UI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16C61E62786234A0091E762 /* UI.framework */; platformFilter = ios; };
+		B1A8298E278B9DEA005C3240 /* UI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B16C61E62786234A0091E762 /* UI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A82991278B9DEA005C3240 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A8292D278B9636005C3240 /* Validation.framework */; platformFilter = ios; };
+		B1A82992278B9DEA005C3240 /* Validation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B1A8292D278B9636005C3240 /* Validation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B1A82998278B9E67005C3240 /* SignUpFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82997278B9E67005C3240 /* SignUpFactory.swift */; };
 		B1E978822785FF5A002CA6BF /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +181,48 @@
 			remoteGlobalIDString = B1A8294C278B9BE6005C3240;
 			remoteInfo = Main;
 		};
+		B1A8297F278B9DEA005C3240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B148F05627836F5E000B24C6;
+			remoteInfo = Data;
+		};
+		B1A82983278B9DEA005C3240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B148F04627836CDF000B24C6;
+			remoteInfo = Domain;
+		};
+		B1A82987278B9DEA005C3240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B148F094278470AC000B24C6;
+			remoteInfo = Infra;
+		};
+		B1A8298B278B9DEA005C3240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B148F0D22785AFCE000B24C6;
+			remoteInfo = Presentation;
+		};
+		B1A8298F278B9DEA005C3240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B16C61E52786234A0091E762;
+			remoteInfo = UI;
+		};
+		B1A82993278B9DEA005C3240 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B148F02F27836BD8000B24C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B1A8292C278B9636005C3240;
+			remoteInfo = Validation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -211,6 +266,22 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B1A82943278B9700005C3240 /* Presentation.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1A82995278B9DEA005C3240 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B1A82982278B9DEA005C3240 /* Domain.framework in Embed Frameworks */,
+				B1A8298E278B9DEA005C3240 /* UI.framework in Embed Frameworks */,
+				B1A8297E278B9DEA005C3240 /* Data.framework in Embed Frameworks */,
+				B1A82992278B9DEA005C3240 /* Validation.framework in Embed Frameworks */,
+				B1A8298A278B9DEA005C3240 /* Presentation.framework in Embed Frameworks */,
+				B1A82986278B9DEA005C3240 /* Infra.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +345,7 @@
 		B1A8295B278B9BE8005C3240 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1A8295D278B9BE8005C3240 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1A82962278B9BE8005C3240 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1A82997278B9E67005C3240 /* SignUpFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -376,6 +448,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A82981278B9DEA005C3240 /* Domain.framework in Frameworks */,
+				B1A8298D278B9DEA005C3240 /* UI.framework in Frameworks */,
+				B1A8297D278B9DEA005C3240 /* Data.framework in Frameworks */,
+				B1A82991278B9DEA005C3240 /* Validation.framework in Frameworks */,
+				B1A82989278B9DEA005C3240 /* Presentation.framework in Frameworks */,
+				B1A82985278B9DEA005C3240 /* Infra.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,6 +857,7 @@
 		B1A8294E278B9BE6005C3240 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				B1A82996278B9E57005C3240 /* Factories */,
 				B1A8294F278B9BE6005C3240 /* AppDelegate.swift */,
 				B1A82951278B9BE6005C3240 /* SceneDelegate.swift */,
 				B1A82958278B9BE8005C3240 /* Assets.xcassets */,
@@ -793,6 +872,14 @@
 			children = (
 			);
 			path = MainTests;
+			sourceTree = "<group>";
+		};
+		B1A82996278B9E57005C3240 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				B1A82997278B9E67005C3240 /* SignUpFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1080,10 +1167,17 @@
 				B1A82949278B9BE6005C3240 /* Sources */,
 				B1A8294A278B9BE6005C3240 /* Frameworks */,
 				B1A8294B278B9BE6005C3240 /* Resources */,
+				B1A82995278B9DEA005C3240 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B1A82980278B9DEA005C3240 /* PBXTargetDependency */,
+				B1A82984278B9DEA005C3240 /* PBXTargetDependency */,
+				B1A82988278B9DEA005C3240 /* PBXTargetDependency */,
+				B1A8298C278B9DEA005C3240 /* PBXTargetDependency */,
+				B1A82990278B9DEA005C3240 /* PBXTargetDependency */,
+				B1A82994278B9DEA005C3240 /* PBXTargetDependency */,
 			);
 			name = Main;
 			productName = Main;
@@ -1438,6 +1532,7 @@
 			files = (
 				B1A82950278B9BE6005C3240 /* AppDelegate.swift in Sources */,
 				B1A82952278B9BE6005C3240 /* SceneDelegate.swift in Sources */,
+				B1A82998278B9E67005C3240 /* SignUpFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1521,6 +1616,42 @@
 			isa = PBXTargetDependency;
 			target = B1A8294C278B9BE6005C3240 /* Main */;
 			targetProxy = B1A82963278B9BE8005C3240 /* PBXContainerItemProxy */;
+		};
+		B1A82980278B9DEA005C3240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B148F05627836F5E000B24C6 /* Data */;
+			targetProxy = B1A8297F278B9DEA005C3240 /* PBXContainerItemProxy */;
+		};
+		B1A82984278B9DEA005C3240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B148F04627836CDF000B24C6 /* Domain */;
+			targetProxy = B1A82983278B9DEA005C3240 /* PBXContainerItemProxy */;
+		};
+		B1A82988278B9DEA005C3240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B148F094278470AC000B24C6 /* Infra */;
+			targetProxy = B1A82987278B9DEA005C3240 /* PBXContainerItemProxy */;
+		};
+		B1A8298C278B9DEA005C3240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B148F0D22785AFCE000B24C6 /* Presentation */;
+			targetProxy = B1A8298B278B9DEA005C3240 /* PBXContainerItemProxy */;
+		};
+		B1A82990278B9DEA005C3240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B16C61E52786234A0091E762 /* UI */;
+			targetProxy = B1A8298F278B9DEA005C3240 /* PBXContainerItemProxy */;
+		};
+		B1A82994278B9DEA005C3240 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B1A8292C278B9636005C3240 /* Validation */;
+			targetProxy = B1A82993278B9DEA005C3240 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
