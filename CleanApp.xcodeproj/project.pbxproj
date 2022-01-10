@@ -717,8 +717,8 @@
 		B148F0D42785AFCE000B24C6 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				B148F0F22785CBAB000B24C6 /* Validators */,
 				B148F0EF2785C7CF000B24C6 /* Presenters */,
+				B148F0F22785CBAB000B24C6 /* Validators */,
 				B148F0EC2785C7A3000B24C6 /* Views */,
 			);
 			path = Presentation;
@@ -727,10 +727,10 @@
 		B148F0DE2785AFCE000B24C6 /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
+				B148F0F12785C7EB000B24C6 /* Presenters */,
+				B16C61D627861F380091E762 /* Validators */,
 				B16C61DE2786204B0091E762 /* Helpers */,
 				B16C61D927861F750091E762 /* UseCases */,
-				B16C61D627861F380091E762 /* Validators */,
-				B148F0F12785C7EB000B24C6 /* Presenters */,
 				B148F0F02785C7E4000B24C6 /* Views */,
 			);
 			path = PresentationTests;

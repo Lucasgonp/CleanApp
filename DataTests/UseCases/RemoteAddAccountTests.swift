@@ -25,7 +25,7 @@ class RemoteAddAccountTests: XCTestCase {
         }
     }
     
-    func test_add_should_complete_with_email_in_use_error_if_cliente_completes_with_forbbiden() {
+    func test_add_should_complete_with_email_in_use_error_if_cliente_completes_with_forbidden() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.emailInUse)) {
             httpClientSpy.completeWithError(.forbidden)
