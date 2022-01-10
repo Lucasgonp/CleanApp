@@ -5,7 +5,7 @@ import Foundation
 
 final class UseCaseFactory {
     private static let httpClient = AlamofireAdapter()
-    private static let apiBaseUrl = "https://demo1986349.mockable.io/app"
+    private static let apiBaseUrl = Environment.variable(.apiBaseUrl)
     
     private static func makeUrl(path: String) -> URL {
         return URL(string: "\(apiBaseUrl)/\(path)")!
