@@ -81,6 +81,9 @@
 		B1A82998278B9E67005C3240 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82997278B9E67005C3240 /* ControllerFactory.swift */; };
 		B1A8299A278BA47C005C3240 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A82999278BA47C005C3240 /* UseCaseFactory.swift */; };
 		B1A8299D278BA520005C3240 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8299C278BA520005C3240 /* SignUpComposer.swift */; };
+		B1A8299F278BA679005C3240 /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A8299E278BA679005C3240 /* SignUpIntegrationTests.swift */; };
+		B1A829A0278BA6E7005C3240 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16C61DA27861F7F0091E762 /* AddAccountSpy.swift */; };
+		B1A829A1278BA738005C3240 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08727846D6F000B24C6 /* TestExtensions.swift */; };
 		B1E978822785FF5A002CA6BF /* AccountModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08E27846EC1000B24C6 /* AccountModelFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -350,6 +353,7 @@
 		B1A82997278B9E67005C3240 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		B1A82999278BA47C005C3240 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		B1A8299C278BA520005C3240 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		B1A8299E278BA679005C3240 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -875,6 +879,7 @@
 		B1A82965278B9BE8005C3240 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
+				B1A8299E278BA679005C3240 /* SignUpIntegrationTests.swift */,
 			);
 			path = MainTests;
 			sourceTree = "<group>";
@@ -1273,6 +1278,7 @@
 					};
 					B1A82961278B9BE8005C3240 = {
 						CreatedOnToolsVersion = 13.2.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = B1A8294C278B9BE6005C3240;
 					};
 				};
@@ -1556,6 +1562,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1A829A0278BA6E7005C3240 /* AddAccountSpy.swift in Sources */,
+				B1A829A1278BA738005C3240 /* TestExtensions.swift in Sources */,
+				B1A8299F278BA679005C3240 /* SignUpIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2482,15 +2491,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Q3AAX42YQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LucasPereira.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Main.app/Main";
@@ -2502,11 +2518,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Q3AAX42YQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = LucasPereira.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
