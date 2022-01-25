@@ -52,6 +52,8 @@
 		B16C6201278627D90091E762 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16C6200278627D90091E762 /* SignUpViewController.swift */; };
 		B16C620B27862BB90091E762 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16C620A27862BB90091E762 /* SignUp.storyboard */; };
 		B16F0EB827A0459800EFC550 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EB727A0459800EFC550 /* Authentication.swift */; };
+		B16F0EBA27A0463600EFC550 /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EB927A0463600EFC550 /* RemoteAuthenticationTests.swift */; };
+		B16F0EBC27A0474B00EFC550 /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EBB27A0474B00EFC550 /* RemoteAuthentication.swift */; };
 		B1A829222788D35F005C3240 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829212788D35F005C3240 /* TestExtensions.swift */; };
 		B1A829252788DBFC005C3240 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */; };
 		B1A829272788DD29005C3240 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829262788DD29005C3240 /* Storyboarded.swift */; };
@@ -370,6 +372,8 @@
 		B16C6200278627D90091E762 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B16C620A27862BB90091E762 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		B16F0EB727A0459800EFC550 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		B16F0EB927A0463600EFC550 /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
+		B16F0EBB27A0474B00EFC550 /* RemoteAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		B1A829212788D35F005C3240 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B1A829262788DD29005C3240 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -635,6 +639,7 @@
 			isa = PBXGroup;
 			children = (
 				B148F07527838750000B24C6 /* RemoteAddAccount.swift */,
+				B16F0EBB27A0474B00EFC550 /* RemoteAuthentication.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -652,6 +657,7 @@
 			isa = PBXGroup;
 			children = (
 				B148F06327836F5E000B24C6 /* RemoteAddAccountTests.swift */,
+				B16F0EB927A0463600EFC550 /* RemoteAuthenticationTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1636,6 +1642,7 @@
 				B148F078278387AD000B24C6 /* HttpPostClient.swift in Sources */,
 				B148F08527839FF0000B24C6 /* ExtensionHelpers.swift in Sources */,
 				B148F0822783900A000B24C6 /* HttpError.swift in Sources */,
+				B16F0EBC27A0474B00EFC550 /* RemoteAuthentication.swift in Sources */,
 				B148F07627838750000B24C6 /* RemoteAddAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1649,6 +1656,7 @@
 				B148F06427836F5E000B24C6 /* RemoteAddAccountTests.swift in Sources */,
 				B148F08F27846EC1000B24C6 /* AccountModelFactory.swift in Sources */,
 				B148F08827846D6F000B24C6 /* TestExtensions.swift in Sources */,
+				B16F0EBA27A0463600EFC550 /* RemoteAuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
