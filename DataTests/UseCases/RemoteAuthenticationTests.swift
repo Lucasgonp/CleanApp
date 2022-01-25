@@ -31,12 +31,29 @@ class RemoteAuthenticationTests: XCTestCase {
         }
     }
     
-    func test_add_should_complete_with_error_if_client_completes_with_valid_data() {
+    func test_auth_should_complete_with_error_if_client_completes_with_valid_data() {
         let (sut, httpClientSpy) = makeSut()
         let account = makeAccountModel()
         expect(sut, completeWith: .success(account)) {
             httpClientSpy.completeWithData(account.toData()!)
         }
+    }
+    
+    func test_auth_should_complete_with_error_if_client_completes_with_invalid_data() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected)) {
+            httpClientSpy.completeWithData(makeInvalidData())
+        }
+    }
+    
+    func test_auth_should_not_complete_if_sut_has_been_deallocated() {
+        let httpClientSpy = HttpClientSpy()
+        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeUrl(), httpClient: httpClientSpy)
+        var result: AddAccount.Result?
+        sut?.add(addAccountModel: makeAddAccountModel(), completion: { result = $0 })
+        sut = nil
+        httpClientSpy.completeWithError(.noConnectivity)
+        XCTAssertNil(result)
     }
 }
 
