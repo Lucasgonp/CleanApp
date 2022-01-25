@@ -57,6 +57,7 @@
 		B16F0EC027A0502D00EFC550 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EBF27A0502D00EFC550 /* LoginPresenterTests.swift */; };
 		B16F0EC227A050D700EFC550 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EC127A050D700EFC550 /* LoginViewModel.swift */; };
 		B16F0EC427A0512600EFC550 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EC327A0512600EFC550 /* LoginPresenter.swift */; };
+		B16F0EC627A053D900EFC550 /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0EC527A053D900EFC550 /* AuthenticationSpy.swift */; };
 		B1A829222788D35F005C3240 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829212788D35F005C3240 /* TestExtensions.swift */; };
 		B1A829252788DBFC005C3240 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */; };
 		B1A829272788DD29005C3240 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829262788DD29005C3240 /* Storyboarded.swift */; };
@@ -380,6 +381,7 @@
 		B16F0EBF27A0502D00EFC550 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		B16F0EC127A050D700EFC550 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B16F0EC327A0512600EFC550 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		B16F0EC527A053D900EFC550 /* AuthenticationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		B1A829212788D35F005C3240 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B1A829262788DD29005C3240 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
@@ -840,6 +842,7 @@
 			isa = PBXGroup;
 			children = (
 				B16C61DA27861F7F0091E762 /* AddAccountSpy.swift */,
+				B16F0EC527A053D900EFC550 /* AuthenticationSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -1740,6 +1743,7 @@
 				B16C61CA27860E220091E762 /* TestExtensions.swift in Sources */,
 				B1A829B4278C6D75005C3240 /* ValidationSpy.swift in Sources */,
 				B16C61E0278620550091E762 /* TestFactories.swift in Sources */,
+				B16F0EC627A053D900EFC550 /* AuthenticationSpy.swift in Sources */,
 				B148F0E02785AFCE000B24C6 /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

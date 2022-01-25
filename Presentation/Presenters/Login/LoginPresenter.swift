@@ -3,18 +3,18 @@ import Domain
 
 public final class LoginPresenter {
     private let alertView: AlertView
-    private let addAccount: AddAccount
+    private let authentication: Authentication
     private let loadingView: LoadingView
     private let validation: Validation
     
     public init(
         alertView: AlertView,
-        addAccount: AddAccount,
+        authentication: Authentication,
         loadingView: LoadingView,
         validation: Validation
     ) {
         self.alertView = alertView
-        self.addAccount = addAccount
+        self.authentication = authentication
         self.loadingView = loadingView
         self.validation = validation
     }
@@ -22,9 +22,9 @@ public final class LoginPresenter {
     public func login(viewModel: LoginViewModel) {
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Falha na validação", message: message))
-        } /*else {
+        } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] result in
+            authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { [weak self] result in
                 guard let self = self else { return }
                 switch result {
                 case .failure(let error):
@@ -44,6 +44,6 @@ public final class LoginPresenter {
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
-        }*/
+        }
     }
 }
