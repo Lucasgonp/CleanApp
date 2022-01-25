@@ -17,12 +17,12 @@ class LoginViewControllerTests: XCTestCase {
     }
     
     func test_primary_button_calls_login_on_tap() throws {
-        var loginViewModel: LoginViewModel?
+        var loginViewModel: LoginRequest?
         let sut = makeSut(loginSpy: { loginViewModel = $0 })
         sut.primaryButton?.simulateTap()
         let email = sut.emailTextField?.text
         let password = sut.passwordTextField?.text
-        XCTAssertEqual(loginViewModel, LoginViewModel(email: email, password: password))
+        XCTAssertEqual(loginViewModel, LoginRequest(email: email, password: password))
     }
     
     func test_signUp_button_calls_signUpViewController_on_tap() throws {
@@ -34,7 +34,7 @@ class LoginViewControllerTests: XCTestCase {
 }
 
 extension LoginViewControllerTests {
-    func makeSut(loginSpy: ((LoginViewModel) -> Void)? = nil, signUpSpy: SignUpButtonSpy = SignUpButtonSpy(), file: StaticString = #file, line: UInt = #line) -> LoginViewController {
+    func makeSut(loginSpy: ((LoginRequest) -> Void)? = nil, signUpSpy: SignUpButtonSpy = SignUpButtonSpy(), file: StaticString = #file, line: UInt = #line) -> LoginViewController {
         let sut = LoginViewController.instantiate()
         sut.login = loginSpy
         sut.signUp = signUpSpy.onTap

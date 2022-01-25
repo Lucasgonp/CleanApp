@@ -9,7 +9,7 @@ public final class LoginViewController: UIViewController, StoryBoarded {
     @IBOutlet weak var primaryButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
-    public var login: ((LoginViewModel) -> Void)?
+    public var login: ((LoginRequest) -> Void)?
     public var signUp: (() -> Void)?
     
     public override func viewDidLoad() {
@@ -48,7 +48,7 @@ extension LoginViewController: AlertView {
 
 @objc extension LoginViewController {
     func primaryButtonTapped() {
-        let viewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        let viewModel = LoginRequest(email: emailTextField.text, password: passwordTextField.text)
         login?(viewModel)
     }
     
