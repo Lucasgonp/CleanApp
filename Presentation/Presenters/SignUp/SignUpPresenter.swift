@@ -26,6 +26,7 @@ public final class SignUpPresenter {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] result in
                 guard let self = self else { return }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
                 case .failure(let error):
                     let errorMessage: String
@@ -42,7 +43,6 @@ public final class SignUpPresenter {
                     self.alertView.showMessage(viewModel: alertViewModel)
                     break
                 }
-                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }

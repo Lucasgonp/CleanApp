@@ -76,6 +76,27 @@ class LoginPresenterTests: XCTestCase {
         authenticationSpy.completeWithAccount(makeAccountModel())
         wait(for: [exp], timeout: 1)
     }
+    
+    func test_auth_should_show_loading_before_and_after_call_add_account() throws {
+        let loadingViewSpy = LoadingViewSpy()
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy, loadingView: loadingViewSpy)
+        let exp = expectation(description: "waiting")
+        loadingViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        wait(for: [exp], timeout: 1)
+        
+        let exp2 = expectation(description: "waiting")
+        loadingViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
+            exp2.fulfill()
+        }
+        authenticationSpy.completeWithError(.unexpected)
+        wait(for: [exp2], timeout: 1)
+    }
 }
 
 extension LoginPresenterTests {

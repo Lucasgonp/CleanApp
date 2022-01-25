@@ -26,6 +26,7 @@ public final class LoginPresenter {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { [weak self] result in
                 guard let self = self else { return }
+                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 switch result {
                 case .failure(let error):
                     let errorMessage: String
@@ -42,7 +43,6 @@ public final class LoginPresenter {
                     self.alertView.showMessage(viewModel: alertViewModel)
                     break
                 }
-                self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
