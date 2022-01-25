@@ -6,6 +6,8 @@
 	<string>CleanApp</string>
 	<key>API_BASE_URL</key>
 	<string>${API_BASE_URL}</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

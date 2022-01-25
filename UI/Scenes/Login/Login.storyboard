@@ -83,15 +83,22 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpo-oo-bfb">
+                                <rect key="frame" x="78" y="805" width="258" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Não possui uma conta? Cadastre-se"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Qpo-oo-bfb" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="AzF-bo-HgI"/>
                             <constraint firstItem="jm2-gY-5kr" firstAttribute="centerY" secondItem="Wg6-E1-Plx" secondAttribute="centerY" id="CeO-K1-Tab"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Wg6-E1-Plx" secondAttribute="trailing" constant="20" id="EbU-Ge-MIb"/>
                             <constraint firstItem="Wg6-E1-Plx" firstAttribute="top" secondItem="siQ-kB-hKi" secondAttribute="bottom" constant="30" id="F3g-RJ-1hf"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="siQ-kB-hKi" secondAttribute="trailing" constant="20" id="GPv-ad-Ye5"/>
                             <constraint firstItem="siQ-kB-hKi" firstAttribute="top" secondItem="tgo-y9-OBS" secondAttribute="bottom" constant="25" id="MyX-4U-usK"/>
+                            <constraint firstItem="Qpo-oo-bfb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wg6-E1-Plx" secondAttribute="bottom" constant="26" id="SmZ-l2-XCk"/>
                             <constraint firstItem="tgo-y9-OBS" firstAttribute="top" secondItem="KXD-9x-tsh" secondAttribute="bottom" constant="20" id="U19-3r-diI"/>
                             <constraint firstItem="siQ-kB-hKi" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="ZCy-hy-LJC"/>
                             <constraint firstItem="tgo-y9-OBS" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="aGx-Np-bah"/>
@@ -100,6 +107,7 @@
                             <constraint firstItem="KXD-9x-tsh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="gKn-Xx-aGX"/>
                             <constraint firstItem="KXD-9x-tsh" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="qEQ-M9-bPR"/>
                             <constraint firstItem="KXD-9x-tsh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="xWi-sx-VgF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Qpo-oo-bfb" secondAttribute="bottom" constant="26" id="zdr-hQ-2xL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -107,6 +115,7 @@
                         <outlet property="emailTextField" destination="RcC-yW-Kbb" id="AQH-ub-xE9"/>
                         <outlet property="passwordTextField" destination="STx-Jm-H2C" id="j4u-bQ-lN9"/>
                         <outlet property="primaryButton" destination="Wg6-E1-Plx" id="njy-vy-Rcz"/>
+                        <outlet property="signUpButton" destination="Qpo-oo-bfb" id="V7I-5H-ITZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

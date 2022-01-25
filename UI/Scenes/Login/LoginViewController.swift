@@ -7,8 +7,10 @@ public final class LoginViewController: UIViewController, StoryBoarded {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var primaryButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
     
     public var login: ((LoginViewModel) -> Void)?
+    public var signUp: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +21,8 @@ public final class LoginViewController: UIViewController, StoryBoarded {
         title = "Testing"
         primaryButton.layer.cornerRadius = 5
         primaryButton.addTarget(self, action: #selector(primaryButtonTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
-    }
-    
-    @objc
-    func primaryButtonTapped() {
-        let viewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
-        login?(viewModel)
     }
 }
 
@@ -46,5 +43,16 @@ extension LoginViewController: AlertView {
         let alertView = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
         alertView.addAction(UIAlertAction(title: "Ok", style: .default))
         present(alertView, animated: true)
+    }
+}
+
+@objc extension LoginViewController {
+    func primaryButtonTapped() {
+        let viewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        login?(viewModel)
+    }
+    
+    func signUpButtonTapped() {
+        signUp?()
     }
 }
