@@ -12,7 +12,7 @@
 		<key>Core.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>8</integer>
 		</dict>
 		<key>Data.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,17 +32,17 @@
 		<key>Main.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>7</integer>
 		</dict>
 		<key>Presentation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>9</integer>
 		</dict>
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>6</integer>
 		</dict>
 		<key>UseCasesIntegrationTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -83,6 +83,11 @@
 			<true/>
 		</dict>
 		<key>B148F0BF2785087A000B24C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B148F0D22785AFCE000B24C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
