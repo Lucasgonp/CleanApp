@@ -25,14 +25,14 @@ class LoginPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signUp_should_call_authentication_with_correct_values() throws {
+    func test_signUp_should_call_authentication_with_correct_values() {
         let authenticationSpy = AuthenticationSpy()
         let sut = makeSut(authentication: authenticationSpy)
         sut.login(viewModel: makeLoginViewModel())
         XCTAssertEqual(authenticationSpy.authenticationModel, makeAuthenticationModel())
     }
     
-    func test_signUp_should_show_generic_error_message_if_authentication_fails() throws {
+    func test_signUp_should_show_generic_error_message_if_authentication_fails() {
         let authenticationSpy = AuthenticationSpy()
         let alertViewSpy = AlertViewSpy()
         let exp = expectation(description: "waiting")
@@ -47,7 +47,7 @@ class LoginPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signUp_should_show_expired_error_message_if_authentication_completes_with_expired_session() throws {
+    func test_signUp_should_show_expired_error_message_if_authentication_completes_with_expired_session() {
         let authenticationSpy = AuthenticationSpy()
         let alertViewSpy = AlertViewSpy()
         let exp = expectation(description: "waiting")
@@ -62,7 +62,7 @@ class LoginPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signUp_should_show_success_message_if_authentication_succeeds() throws {
+    func test_signUp_should_show_success_message_if_authentication_succeeds() {
         let authenticationSpy = AuthenticationSpy()
         let alertViewSpy = AlertViewSpy()
         let exp = expectation(description: "waiting")
