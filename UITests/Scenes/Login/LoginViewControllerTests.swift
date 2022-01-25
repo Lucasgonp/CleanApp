@@ -8,15 +8,15 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSut().activityIndicator?.isAnimating, false)
     }
     
-//    func test_sut_implements_loadingView() throws {
-//        XCTAssertNotNil(makeSut() as LoadingView)
-//    }
+    func test_sut_implements_loadingView() throws {
+        XCTAssertNotNil(makeSut() as LoadingView)
+    }
+
+    func test_sut_implements_alertView() throws {
+        XCTAssertNotNil(makeSut() as AlertView)
+    }
 //
-//    func test_sut_implements_alertView() throws {
-//        XCTAssertNotNil(makeSut() as AlertView)
-//    }
-//
-//    func test_save_button_calls_signUp_on_tap() throws {
+//    func test_primary_button_calls_login_on_tap() throws {
 //        var signUpViewModel: SignUpViewModel?
 //        let sut = makeSut(signUpSpy: { signUpViewModel = $0 })
 //        sut.saveButton?.simulateTap()
