@@ -3,7 +3,7 @@ import Presentation
 import UIKit
 
 public final class SignUpViewController: UIViewController, StoryBoarded {
-    @IBOutlet weak var actitityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
@@ -35,10 +35,10 @@ extension SignUpViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
             view.isUserInteractionEnabled = false
-            actitityIndicator.startAnimating()
+            activityIndicator.startAnimating()
         } else {
             view.isUserInteractionEnabled = true
-            actitityIndicator.stopAnimating()
+            activityIndicator.stopAnimating()
         }
     }
 }

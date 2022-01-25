@@ -5,7 +5,7 @@ import UIKit
 
 class SignUpViewControllerTests: XCTestCase {
     func test_loading_is_hidden_on_start() throws {
-        XCTAssertEqual(makeSut().actitityIndicator?.isAnimating, false)
+        XCTAssertEqual(makeSut().activityIndicator?.isAnimating, false)
     }
     
     func test_sut_implements_loadingView() throws {
