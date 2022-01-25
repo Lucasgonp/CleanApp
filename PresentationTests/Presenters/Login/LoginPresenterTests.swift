@@ -47,6 +47,20 @@ class LoginPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
+    func test_signUp_should_show_expired_error_message_if_authentication_completes_with_expired_session() throws {
+        let authenticationSpy = AuthenticationSpy()
+        let alertViewSpy = AlertViewSpy()
+        let exp = expectation(description: "waiting")
+        let sut = makeSut(alertView: alertViewSpy, authentication: authenticationSpy)
+        alertViewSpy.observe { viewModel in
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Erro", message: "Email e/ou senha inválido(s)"))
+            exp.fulfill()
+        }
+        
+        sut.login(viewModel: makeLoginViewModel())
+        authenticationSpy.completeWithError(.expiredSession)
+        wait(for: [exp], timeout: 1)
+    }
     
     func test_signUp_should_show_success_message_if_authentication_succeeds() throws {
         let authenticationSpy = AuthenticationSpy()
@@ -54,7 +68,7 @@ class LoginPresenterTests: XCTestCase {
         let exp = expectation(description: "waiting")
         let sut = makeSut(alertView: alertViewSpy, authentication: authenticationSpy)
         alertViewSpy.observe { viewModel in
-            XCTAssertEqual(viewModel, AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
+            XCTAssertEqual(viewModel, AlertViewModel(title: "Sucesso", message: "Login feito com sucesso"))
             exp.fulfill()
         }
         

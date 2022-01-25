@@ -30,15 +30,15 @@ public final class LoginPresenter {
                 case .failure(let error):
                     let errorMessage: String
                     switch error {
-                    case .emailInUse:
-                        errorMessage = "Esse Email já está em uso"
+                    case .expiredSession:
+                        errorMessage = "Email e/ou senha inválido(s)"
                     default:
                         errorMessage = "Algo inesperado aconteceu, tente novamente em alguns instantes"
                     }
                     
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: errorMessage))
                 case .success:
-                    let alertViewModel = AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso.")
+                    let alertViewModel = AlertViewModel(title: "Sucesso", message: "Login feito com sucesso")
                     self.alertView.showMessage(viewModel: alertViewModel)
                     break
                 }
