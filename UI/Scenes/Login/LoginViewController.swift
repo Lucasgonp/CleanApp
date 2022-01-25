@@ -8,6 +8,8 @@ public final class LoginViewController: UIViewController, StoryBoarded {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var primaryButton: UIButton!
     
+    public var login: ((LoginViewModel) -> Void)?
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -19,12 +21,11 @@ public final class LoginViewController: UIViewController, StoryBoarded {
         primaryButton.addTarget(self, action: #selector(primaryButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
     }
-}
-
-extension LoginViewController {
+    
     @objc
     func primaryButtonTapped() {
-        
+        let viewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        login?(viewModel)
     }
 }
 

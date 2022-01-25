@@ -61,7 +61,8 @@
 		B16F0EC927A0636A00EFC550 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B16F0EC827A0636A00EFC550 /* Login.storyboard */; };
 		B16F0ECB27A063F000EFC550 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0ECA27A063F000EFC550 /* LoginViewController.swift */; };
 		B16F0ECD27A0643600EFC550 /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16F0ECC27A0643600EFC550 /* LoginViewControllerTests.swift */; };
-		B1A829222788D35F005C3240 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829212788D35F005C3240 /* TestExtensions.swift */; };
+		B16F0ECF27A06BC800EFC550 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B148F08727846D6F000B24C6 /* TestExtensions.swift */; };
+		B1A829222788D35F005C3240 /* UITestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829212788D35F005C3240 /* UITestExtensions.swift */; };
 		B1A829252788DBFC005C3240 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */; };
 		B1A829272788DD29005C3240 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A829262788DD29005C3240 /* Storyboarded.swift */; };
 		B1A82935278B9636005C3240 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1A8292D278B9636005C3240 /* Validation.framework */; };
@@ -388,7 +389,7 @@
 		B16F0EC827A0636A00EFC550 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		B16F0ECA27A063F000EFC550 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B16F0ECC27A0643600EFC550 /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
-		B1A829212788D35F005C3240 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
+		B1A829212788D35F005C3240 /* UITestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestExtensions.swift; sourceTree = "<group>"; };
 		B1A829242788DBFC005C3240 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		B1A829262788DD29005C3240 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		B1A8292D278B9636005C3240 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -953,7 +954,7 @@
 		B1A829202788D34D005C3240 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				B1A829212788D35F005C3240 /* TestExtensions.swift */,
+				B1A829212788D35F005C3240 /* UITestExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1795,7 +1796,8 @@
 			files = (
 				B16F0ECD27A0643600EFC550 /* LoginViewControllerTests.swift in Sources */,
 				B16C61F32786234A0091E762 /* SignUpViewControllerTests.swift in Sources */,
-				B1A829222788D35F005C3240 /* TestExtensions.swift in Sources */,
+				B1A829222788D35F005C3240 /* UITestExtensions.swift in Sources */,
+				B16F0ECF27A06BC800EFC550 /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
