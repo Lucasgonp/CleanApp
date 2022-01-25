@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SignUp-->
+        <!--Login-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" id="Y6W-OH-hqX" userLabel="SignUp" customClass="SignUpViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Y6W-OH-hqX" userLabel="Login" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wg6-E1-Plx">
-                                <rect key="frame" x="20" y="526.5" width="374" height="60"/>
+                                <rect key="frame" x="20" y="408.5" width="374" height="60"/>
                                 <color key="backgroundColor" red="0.20392156862745098" green="0.47058823529411764" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="aCe-LU-XYy"/>
@@ -55,7 +55,7 @@
                                 </buttonConfiguration>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="jm2-gY-5kr">
-                                <rect key="frame" x="342" y="540.5" width="32" height="32"/>
+                                <rect key="frame" x="342" y="422.5" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="Q1f-t9-jQn"/>
                                     <constraint firstAttribute="height" constant="32" id="wem-o8-EtT"/>
@@ -63,18 +63,10 @@
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="siQ-kB-hKi">
-                                <rect key="frame" x="20" y="279.5" width="374" height="217"/>
+                                <rect key="frame" x="20" y="279.5" width="374" height="99"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kgs-I5-Nm1" userLabel="nameTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="fvK-Mj-2JA"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="name"/>
-                                    </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcC-yW-Kbb" userLabel="emailTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="59" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KqV-fm-La0"/>
                                         </constraints>
@@ -82,20 +74,12 @@
                                         <textInputTraits key="textInputTraits" textContentType="email"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="STx-Jm-H2C" userLabel="passwordTextField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="118" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="59" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="wQO-xG-fxN"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zlc-IZ-6Ug" userLabel="confirmPasswordField" customClass="RoundedTextField" customModule="UI" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="177" width="374" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="DQB-XV-sys"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -120,9 +104,7 @@
                     </view>
                     <connections>
                         <outlet property="actitityIndicator" destination="jm2-gY-5kr" id="sgH-vs-PgZ"/>
-                        <outlet property="confirmPasswordField" destination="Zlc-IZ-6Ug" id="STT-ah-8ZY"/>
                         <outlet property="emailTextField" destination="RcC-yW-Kbb" id="jKs-ww-hkW"/>
-                        <outlet property="nameTextField" destination="kgs-I5-Nm1" id="nV9-4r-QOd"/>
                         <outlet property="passwordTextField" destination="STx-Jm-H2C" id="yDU-w7-XDh"/>
                         <outlet property="saveButton" destination="Wg6-E1-Plx" id="CmH-jt-zyX"/>
                     </connections>
