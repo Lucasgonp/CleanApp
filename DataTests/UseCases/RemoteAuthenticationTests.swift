@@ -48,9 +48,9 @@ class RemoteAuthenticationTests: XCTestCase {
     
     func test_auth_should_not_complete_if_sut_has_been_deallocated() {
         let httpClientSpy = HttpClientSpy()
-        var sut: RemoteAddAccount? = RemoteAddAccount(url: makeUrl(), httpClient: httpClientSpy)
-        var result: AddAccount.Result?
-        sut?.add(addAccountModel: makeAddAccountModel(), completion: { result = $0 })
+        var sut: RemoteAuthentication? = RemoteAuthentication(url: makeUrl(), httpClient: httpClientSpy)
+        var result: Authentication.Result?
+        sut?.auth(authenticationModel: makeAuthenticationModel(), completion: { result = $0 })
         sut = nil
         httpClientSpy.completeWithError(.noConnectivity)
         XCTAssertNil(result)
