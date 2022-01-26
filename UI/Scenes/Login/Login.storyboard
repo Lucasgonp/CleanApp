@@ -34,8 +34,8 @@
                                     <constraint firstItem="Rc9-cw-WgM" firstAttribute="top" secondItem="KXD-9x-tsh" secondAttribute="top" constant="40" id="dmN-KS-ucu"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CRIAR CONTA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgo-y9-OBS" userLabel="FAZER LOGIN">
-                                <rect key="frame" x="140" y="234" width="134" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgo-y9-OBS" userLabel="FAZER LOGIN">
+                                <rect key="frame" x="176.5" y="234" width="61" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="kfh-A7-h9N"/>
                                 </constraints>
@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="60" id="aCe-LU-XYy"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Criar conta">
+                                <buttonConfiguration key="configuration" style="filled" title="Fazer login">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="16"/>
                                 </buttonConfiguration>
                             </button>

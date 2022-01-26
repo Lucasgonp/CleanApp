@@ -9,7 +9,7 @@ class EmailValidatorSpy: EmailValidator {
         self.email = email
         return isValid
     }
-    
+
     func simulateInvalidEmail() {
         self.isValid = false
     }
