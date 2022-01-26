@@ -7,4 +7,6 @@ struct Color {
     static let primaryLight = UIColor(hex: "#3478F6")
     
     static let primaryBackground = UIColor(hex: "#E5E5EA")
+    
+    static let white = UIColor.white
 }

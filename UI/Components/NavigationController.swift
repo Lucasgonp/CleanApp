@@ -2,6 +2,8 @@ import Foundation
 import UIKit
 
 public final class NavigationController: UINavigationController {
+    private var currentViewController: UIViewController?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setup()
@@ -27,15 +29,24 @@ public final class NavigationController: UINavigationController {
         appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationBar.standardAppearance = appearance
         navigationBar.scrollEdgeAppearance = appearance
+        navigationBar.tintColor = Color.white
     }
 }
 
 public extension NavigationController {
-    func setRootViewController(_ viewcontroller: UIViewController) {
-        setViewControllers(viewControllers, animated: true)
+    func setRootViewController(_ viewController: UIViewController) {
+        setViewControllers([viewController], animated: true)
+        currentViewController = viewController
+        hideBackButtonText()
     }
     
-    func pushViewController(_ viewcontroller: UIViewController) {
-        pushViewController(viewcontroller, animated: true)
+    func pushViewController(_ viewController: UIViewController) {
+        pushViewController(viewController, animated: true)
+        currentViewController = viewController
+        hideBackButtonText()
+    }
+    
+    func hideBackButtonText() {
+        currentViewController?.navigationItem.backButtonTitle = String()
     }
 }

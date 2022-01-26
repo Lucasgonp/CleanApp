@@ -18,7 +18,7 @@ public final class LoginViewController: UIViewController, StoryBoarded {
     }
     
     private func configure() {
-        title = "Testing"
+        title = "Login"
         primaryButton.layer.cornerRadius = 5
         primaryButton.addTarget(self, action: #selector(primaryButtonTapped), for: .touchUpInside)
         signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
