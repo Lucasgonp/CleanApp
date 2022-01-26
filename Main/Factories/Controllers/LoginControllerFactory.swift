@@ -5,7 +5,11 @@ import UI
 import Validation
 import Infra
 
-public func makeLoginController(authentication: Authentication)-> LoginViewController {
+public func makeLoginController() -> SignUpViewController {
+    return makeSignUpControllerWith(addAccount: makeRemoteAddAccount())
+}
+
+public func makeLoginControllerWith(authentication: Authentication)-> LoginViewController {
     let controller = LoginViewController.instantiate()
     let validationComposite = ValidationComposite(validations: makeSignUpValidations())
     let presenter = LoginPresenter(alertView: WeakVarProxy(controller), authentication: authentication, loadingView: WeakVarProxy(controller), validation: validationComposite)
